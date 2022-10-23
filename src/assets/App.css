@@ -1,0 +1,12 @@
+.App {
+  border: 1px solid black;
+  min-height: 50vh;
+}
+.ct-list {
+  border-right: 2px solid greenyellow;
+}
+.hd {
+  border-right: 2px solid greenyellow;
+  font-size: 30px;
+  font-weight: 700;
+}
