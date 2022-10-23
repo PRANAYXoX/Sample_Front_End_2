@@ -10,7 +10,6 @@ const Form: React.FunctionComponent = () => {
         const p1 = await fetch("http://localhost:8000/new-contact", {
           method: "POST",
           body: JSON.stringify({
-            id: Math.trunc(Math.random() * 100000),
             name: name,
             number: num,
           }),
