@@ -12,16 +12,15 @@ interface propType {
   contacts: Array<obType>;
 }
 const App: React.FunctionComponent = () => {
-  const [ct, setCt] = useState<[{ id: number; name: string; number: string }]>([
-    { id: 0, name: "", number: "" },
-  ]);
+  const [ct, setCt] = useState<
+    [{ _id: number | string; name: string; number: string }]
+  >([{ _id: "", name: "", number: "" }]);
   useEffect(() => {
     (async function getContacts() {
       const res1: any = await fetch("http://localhost:8000/fetch-contacts");
       let res2: any = await res1.json();
       console.log("RES:", res2);
       setCt(res2.contacts);
-      console.log("CTTT", ct);
     })();
   }, []);
   return (
